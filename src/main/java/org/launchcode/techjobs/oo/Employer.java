@@ -16,7 +16,7 @@ public class Employer {
     public Employer(String value) {
         this();
         this.value = value;
-    }
+    }                     
 
     // Custom toString, equals, and hashCode methods:
 
