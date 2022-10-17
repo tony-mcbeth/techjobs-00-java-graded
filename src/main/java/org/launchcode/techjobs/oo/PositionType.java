@@ -2,7 +2,7 @@ package org.launchcode.techjobs.oo;
 
 public class PositionType {
 
-    private int id;
+/*    private int id;
     private static int nextId = 1;
     private String value;
 
@@ -10,14 +10,13 @@ public class PositionType {
         id = nextId;
         nextId++;
     }
-
+*/
     public PositionType(String value) {
-        this();
-        this.value = value;
+        super();
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
-    public String toString() {return value;
+ /*   public String toString() {return value;
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
@@ -53,3 +52,5 @@ public class PositionType {
     }
 
 }
+
+  */

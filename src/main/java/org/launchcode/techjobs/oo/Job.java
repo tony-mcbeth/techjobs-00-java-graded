@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
+    public String getId;
     private int id;
     private static int nextId = 1;
 
@@ -88,6 +89,9 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    public int getId() {
     }
 }
 

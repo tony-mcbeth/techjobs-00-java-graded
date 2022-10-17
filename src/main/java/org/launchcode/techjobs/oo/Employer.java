@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Employer {
 
-    private int id;
+/*    private int id;
     private static int nextId = 1;
     private String value;
 
@@ -12,15 +12,59 @@ public class Employer {
         id = nextId;
         nextId++;
     }
-
+*/
     public Employer(String value) {
-        this();
-        this.value = value;
-    }                     
+        super();
+    }
 
-    // Custom toString, equals, and hashCode methods:
+    static class JobField {
+        private int id;
+        private static int nextId = 1;
+        private String value;
 
-    @Override
+
+        public JobField() {
+            this.id = nextId;
+            nextId++;
+        }
+        public JobField(String value) {
+            this();
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return this.value;
+        }
+    //Objects with same id are equal
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            JobField jobField = (JobField) o;
+            return id == jobField.id;
+        }
+        @Override
+        public int hashCode() {
+            return Objects.hash(getId());
+        }
+
+        public int getId() {
+            return id;
+            }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+    }
+
+// Custom toString, equals, and hashCode methods:
+
+ /*   @Override
     public String toString() {
         return value;
     }
@@ -53,3 +97,4 @@ public class Employer {
     }
 
 }
+*/
