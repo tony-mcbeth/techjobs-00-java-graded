@@ -1,8 +1,14 @@
 package org.launchcode.techjobs.oo;
 
+import org.launchcode.techjobs.oo.test.JobField;
+
 import java.util.Objects;
 
-public class Employer {
+public class Employer extends JobField {
+    public Employer(String value) {
+        super(value);
+    }
+}
 
 /*    private int id;
     private static int nextId = 1;
@@ -12,9 +18,9 @@ public class Employer {
         id = nextId;
         nextId++;
     }
-*/
+
     public Employer(String value) {
-        super();
+        super(value);
     }
 
     static class JobField {
@@ -64,7 +70,7 @@ public class Employer {
 
 // Custom toString, equals, and hashCode methods:
 
- /*   @Override
+    @Override
     public String toString() {
         return value;
     }

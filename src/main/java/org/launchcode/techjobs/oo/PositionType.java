@@ -1,19 +1,26 @@
 package org.launchcode.techjobs.oo;
 
-public class PositionType {
+public class PositionType extends JobField{
 
-/*    private int id;
-    private static int nextId = 1;
-    private String value;
+    public PositionType(String value){
+        super(value);
+    }
 
-    public PositionType() {
-        id = nextId;
-        nextId++;
-    }
-*/
-    public PositionType(String value) {
-        super();
-    }
+    /*    private int id;
+        private static int nextId = 1;
+        private String value;
+
+        public PositionType() {
+            id = nextId;
+            nextId++;
+        }
+    */
+ //   public PositionType(String value) {
+ //       super(value);
+ //   }
+}
+
+
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
  /*   public String toString() {return value;
