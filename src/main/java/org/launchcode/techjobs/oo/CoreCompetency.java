@@ -1,9 +1,5 @@
 package org.launchcode.techjobs.oo;
 
-import org.launchcode.techjobs.oo.test.JobField;
-
-import java.util.Objects;
-
 public class CoreCompetency extends JobField {
     public CoreCompetency(String value) {
         super(value);
@@ -22,13 +18,13 @@ public class CoreCompetency extends JobField {
        super();
     }
 
-    // Custom toString, equals, and hashCode methods:
+    // toString
 
     @Override
     public String toString() {
         return value;
     }
-
+    //equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,6 +32,7 @@ public class CoreCompetency extends JobField {
         CoreCompetency that = (CoreCompetency) o;
         return id == that.id;
     }
+    //hashCode
 
     @Override
     public int hashCode() {

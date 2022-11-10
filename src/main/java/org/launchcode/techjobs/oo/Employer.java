@@ -1,11 +1,8 @@
 package org.launchcode.techjobs.oo;
 
-import org.launchcode.techjobs.oo.test.JobField;
-
-import java.util.Objects;
-
 public class Employer extends JobField {
     public Employer(String value) {
+
         super(value);
     }
 }
@@ -68,13 +65,13 @@ public class Employer extends JobField {
         }
     }
 
-// Custom toString, equals, and hashCode methods:
+// Custom toString
 
     @Override
     public String toString() {
         return value;
     }
-
+// Equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -82,7 +79,7 @@ public class Employer extends JobField {
         Employer employer = (Employer) o;
         return getId() == employer.getId();
     }
-
+//hashcode
     @Override
     public int hashCode() {
         return Objects.hash(getId());

@@ -1,4 +1,4 @@
-package org.launchcode.techjobs.oo.test;
+package org.launchcode.techjobs.oo;
 
         import java.util.Objects;
 
@@ -16,12 +16,12 @@ public abstract class JobField {
         this();
         this.value = value;
     }
-
+//toString method
     @Override
     public String toString() {
         return this.value;
     }
-
+//equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -29,23 +29,27 @@ public abstract class JobField {
         JobField jobField = (JobField) o;
         return id == jobField.id;
     }
-
+//hashCode method
     @Override
     public int hashCode() {
+
         return Objects.hash(id);
     }
 
 
     //the getters and setters
     public int getId() {
+
         return id;
     }
 
     public String getValue() {
+
         return value;
     }
 
     public void setValue(String value) {
+
         this.value = value;
     }
 }
