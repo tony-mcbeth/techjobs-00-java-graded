@@ -18,7 +18,7 @@ public class JobTest {
         Job job1 = new Job();
         Job job2 = new Job();
 
-        assertEquals(job1.getId(), job2.getId());
+        assertEquals(job1.getId() +1, job2.getId());
     }
 
     @Test
@@ -46,16 +46,16 @@ public class JobTest {
         assertFalse(job4.equals(job5));
     }
     @Test
-    public void testToStringStartsAndEndWithNewLine() {
+    public void testToStringStartsAndEndsWithNewLine() {
         Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals("\n", job6.toString().charAt(0));
-        assertEquals("\n", job6.toString().charAt(job6.toString().length() -1));
+        assertEquals('\n', job6.toString().charAt(0));
+        assertEquals('\n', job6.toString().charAt(job6.toString().length() -1));
     }
 
     @Test
-    public void testToStringContainsCorrectLabelAndData(){
+    public void testToStringContainsCorrectLabelsAndData(){
         Job job7 = new Job("Product tester", new Employer ("ACME"), new Location("Dessert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals("\nID: " + job7.getId() + "\nName:  Product tester\nEmployer:  ACME\nLocations: Desert\nPosition Type:  Quality control\nCore Competency:  Persistence\n", job7.toString() );
+        assertEquals("\nID: " + job7.getId() + "\nName: Product tester\nEmployer: ACME\nLocation: Dessert\nPosition Type: Quality control\nCore Competency: Persistence\n", job7.toString() );
     }
     @Test
     public void testToStringHandlesEmptyField() {
@@ -66,3 +66,4 @@ public class JobTest {
 
 
 }
+
